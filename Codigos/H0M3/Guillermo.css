@@ -62,7 +62,7 @@ section p {
   width: 200px;
   height: 200px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-bottom: 20px;
   transition: transform 0.5s ease;
 }
@@ -79,6 +79,8 @@ section p {
   margin: 0 auto;
   padding: 0 30px;
 }
+/* aaaa */
+
 
 .card {
   background: rgba(255, 255, 255, 0.25);
