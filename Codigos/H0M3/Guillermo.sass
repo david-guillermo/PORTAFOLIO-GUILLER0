@@ -1,21 +1,27 @@
-/* Estilos generales */
 body 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-family: Arial, sans-serif
     margin: 0
     padding: 0
-    background-color: black
+
+
+.container 
+    width: 80%
+    margin: 0 auto
 
 
 header 
-    background-color: #c1bbbb
-    color: #060606
-    padding: 20px
-    text-align: center
+    background-color: #333
+    padding: 20px 0
+
+
+.logo img 
+    width: 100px
 
 
 nav ul 
     list-style-type: none
     padding: 0
+    margin: 0
 
 
 nav ul li 
@@ -24,159 +30,23 @@ nav ul li
 
 
 nav ul li a 
-    color: #000000
     text-decoration: none
+    color: white
+    transition: color 0.3s ease-in-out /* Animación para el color del enlace */
+
+
+nav ul li a:hover 
+    color: #ffc107 /* Cambio de color al pasar el raton */
 
 
 section 
-    padding: 50px
-    text-align: center
+    padding: 50px 0
 
 
-footer 
-    background-color: #5f5959
-    color: #000000
-    text-align: center
-    padding: 20px
-    position: absolute
-    bottom: 0
-    width: 100%
-
-
-/* Estilos específicos */
-section h2 
+h1, h2 
     color: #333
 
 
-section p 
-    color: #666
-
-
-.perfil 
-    position: relative
-
-
-.perfil img 
-    border-radius: 50%
-    width: 200px
-    height: 200px
-    object-fit: cover
-    margin-bottom: 20px
-    transition: transform 0.5s ease
-
-
-.perfil:hover img 
-    transform: scale(1.1)
-
-
-
-
-
-
-
-
-
-
-
-
-// CONTACTO ⚡ CARDS.............
-
-.container 
-    overflow: auto
-    display: flex
-    scroll-snap-type: x mandatory
-    width: 90%
-    margin: 0 auto
-    padding: 0 30px
-
-
-.card 
-    background: rgba(255, 255, 255, 0.25)
-    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37)
-    backdrop-filter: blur(7px)
-    -webkit-backdrop-filter: blur(7px)
-    border-radius: 20px
-    padding: 2rem
-    margin: 3rem
-    width: 100%
-
-
-.container:hover > :not(:hover) 
-    opacity: 0.2
-
-
-.title 
-    width: 100%
-    display: inline-block
-    word-break: break-all
-    white-space: nowrap
-    overflow: hidden
-    text-overflow: ellipsis
-    text-align: center
-    margin: 1rem auto
-
-
-// tarjetar de proyectos
-
-.card 
-    position: relative
-    width: 190px
-    height: 254px
-    background-color: #000
-    display: flex
-    flex-direction: column
-    justify-content: end
-    padding: 12px
-    gap: 12px
-    border-radius: 8px
-    cursor: pointer
-
-// parte de adelante
-.card::before
-    content: url()
-    position: absolute
-    inset: 0
-    left: -5px
-    margin: auto
-    width: 200px
-    height: 264px
-    border-radius: 10px
-    background: linear-gradient(-45deg, #8c8f8cd1 0%, #d1cdcdcb 100% )
-    z-index: -10
-    pointer-events: none
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-
-// parte de atras
-.card::after 
-    content: ""
-    z-index: -1
-    position: absolute
-    inset: 0
-    background: linear-gradient(-45deg, #9ba59e 0%, #ffffff 100% )
-    transform: translate3d(0, 0, 0) scale(0.95)
-    filter: blur(20px)
-
-
-// .heading 
-    // font-size: 20px
-    // text-transform: capitalize
-    // font-weight: 700
-
-
-// .card p:not(.heading) 
-    // font-size: 14px
-
-
-.card p:last-child 
-    color: #000000
-    font-weight: 600
-
-
-// .card:hover::after 
-    // filter: blur(30px)
-
-
-.card:hover::before 
-    transform: rotate(-90deg) scaleX(1.34) scaleY(0.77)
-
+.left-align 
+    text-align: left /* Alineación del contenido a la izquierda */
 
