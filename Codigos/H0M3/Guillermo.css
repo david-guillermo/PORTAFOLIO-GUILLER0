@@ -2,51 +2,147 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.8078431373);
 }
 
 header {
-  background-color: #333;
+  background-color: rgba(255, 255, 255, 0.7098039216);
+  color: #000000;
   padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .logo img {
-  width: 100px;
+  width: 150px;
+  height: 50px;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.nav-links {
+  list-style: none;
+  display: flex;
 }
 
-nav ul li {
-  display: inline;
+.nav-links li {
   margin-right: 20px;
 }
 
-nav ul li a {
+.nav-links li a {
+  color: #000000;
   text-decoration: none;
-  color: white;
-  transition: color 0.3s ease-in-out;
+  position: relative;
 }
 
-nav ul li a:hover {
-  color: #ffc107;
+.nav-links li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover::before {
+  transform: scaleX(1);
+}
+
+main {
+  padding-top: 100px;
 }
 
 section {
-  padding: 50px 0;
+  margin-bottom: 100%;
 }
 
-h1, h2 {
-  color: #333;
+section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative;
 }
 
-.left-align {
-  text-align: left;
+section h2::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: #333;
+  bottom: -10px;
+  left: 0;
+}
+
+.foto-perfil {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.galeria-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 50%;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3, .overlay p {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.overlay p {
+  margin-top: 10px;
+}
+
+img {
+  max-width: 40%;
+  border-radius: 50px;
 }/*# sourceMappingURL=Guillermo.css.map */
