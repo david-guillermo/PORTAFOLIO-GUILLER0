@@ -1,148 +1,170 @@
 body 
-    font-family: Arial, sans-serif
+    font-family: sans-serif
     margin: 0
     padding: 0
-    background-color: #000000ce
+    text-align: center
+    background: #121212e8
 
 
-// barra de mavegaciom
+// color de texto de la pagina
+main
+    color: #ffffffe4
+
+// color y estilos de la barra de navegacion
 header 
-    background-color: #ffffffb5
-    color: #000000
-    padding: 20px 0
-    position: fixed
-    width: 100%
-    z-index: 1000
-    transition: background-color 0.3s ease
+    background-color: #cfcfcf94
+    padding: 20px
 
 
-nav 
-    display: flex
-    justify-content: space-between
-    align-items: center
-    padding: 0 20px
-
-// imagen de la barra de navegacion 
-.logo img 
-    width: 150px
-    height: 50px
+// logo de la barra de nav
+nav img 
+    display: inline-block
+    margin-right: 20px
+    height: 50px 
 
 
-.nav-links 
+nav ul 
     list-style: none
-    display: flex
+    margin: 0
+    padding: 0
 
 
-.nav-links li 
+nav li 
+    display: inline-block
     margin-right: 20px
 
 
-.nav-links li a 
-    color: #000000
+nav a 
     text-decoration: none
-    position: relative
+    color: #0a0a0a
 
-
-.nav-links li a::before 
-    content: ''
-    position: absolute
-    width: 100%
-    height: 2px
-    background-color: #000000
-    bottom: 0
-    left: 0
-    transform: scaleX(0)
-    transition: transform 0.3s ease
-
-
-.nav-links li a:hover::before 
-    transform: scaleX(1)
-
-
-main 
-    padding-top: 100px
-
-
+// separacion entre senciones
 section 
-    margin-bottom: 100%
+    padding: 50px
 
 
-section h2 
-    font-size: 24px
+#inicio h1 
+    font-size: 2.5em
     margin-bottom: 20px
-    position: relative
 
 
-section h2::after 
-    content: ''
-    position: absolute
-    width: 50px
-    height: 3px
-    background-color: #333
-    bottom: -10px
-    left: 0
+#inicio img 
+    width: 200px
+    height: auto
+    border-radius: 50%
 
-// foto de perfil
-.foto-perfil 
+
+#mis-proyectos .proyectos 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+
+/* Estilos para las cards de proyectos */
+
+footer 
+    background-color: #585858
     text-align: center
-    margin-bottom: 4px
+    padding: 20px
 
-// img de los proyectos 
-.galeria-proyectos 
-    display: grid
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
-    gap: 20px
 
-// cards genereles (estilo)
+
+
+#galeria 
+    padding: 20px
+
+
+.contenedor-imagenes 
+    display: flex
+    overflow-x: auto
+    white-space: nowrap
+    transition: transform 0.5s ease
+    /* Animación de transición */
+
+
+.contenedor-imagenes img 
+    margin-right: 20px
+    width: 200px
+    height: auto
+    transform: translateX(0)
+    /* Posición inicial */
+
+
+.contenedor-imagenes:hover 
+    transform: translateX(-10px)
+    /* Desplazamiento al hover */
+
+
+.contenedor-imagenes img:hover 
+    transform: scale(1)
+    /* Aumento de tamaño al hover */
+    box-shadow: 0 5px 10px rgb(255, 255, 255)
+    /* Sombra al hover */
+
+
+
+
+
+
+
+// CONTACTO 1
 .card 
-    position: relative
-    overflow: hidden
-    border-radius: 5px
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
-    transition: transform 0.3s ease
+    width: 100%
+    max-width: 290px
+    height: 70px
+    background: #353535
+    border-radius: 20px
+    display: flex
+    align-items: center
+    justify-content: left
+    backdrop-filter: blur(10px)
+    transition: 0.5s ease-in-out
 
 
 .card:hover 
-    transform: translateY(-8px)
+    cursor: pointer
+    transform: scale(1.05)
 
-// img de las cards
-.card img 
-    width: 100%
-    height: auto
-    border-radius: 8px
 
-// animacion
-.overlay 
-    position: absolute
-    top: 0
-    left: 0
-    background-color: rgba(0, 0, 0, 0.7)
-    width: 50%
-    height: 100%
-    border-radius: 5px
+.img 
+    width: 50px
+    height: 50px
+    margin-left: 10px
+    border-radius: 10px
+    background: linear-gradient(#e3e3e3,#1102e8)
+
+
+.card:hover > .img 
+    transition: 0.5s ease-in-out
+    background: linear-gradient(#0b046c, #e3e3e3)
+
+
+.textBox 
+    width: calc(100% - 90px)
+    margin-left: 10px
+    color: white
+    font-family: 'Poppins' sans-serif
+
+
+.textContent 
     display: flex
-    flex-direction: column
-    justify-content: center
     align-items: center
-    opacity: 0
-    transition: opacity 0.3s ease
+    justify-content: space-between
 
 
-.card:hover .overlay 
-    opacity: 1
+.span 
+    font-size: 10px
 
 
-.overlay h3, .overlay p 
-    color: #fff
+.h1 
+    font-size: 16px
+    font-weight: bold
+
+
+.p 
+    font-size: 12px
+    font-weight: lighter
+
+.card zaza
     text-align: center
-    margin: 0
-    padding: 0 20px
-
-
-.overlay p 
-    margin-top: 10px
-
-// tamaño e forma de las imagenes 
-img 
-    max-width: 40%
-    border-radius: 50px
+    justify-content: center
