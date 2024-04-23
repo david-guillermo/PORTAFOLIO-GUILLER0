@@ -64,6 +64,7 @@ footer {
   background-color: #585858;
   text-align: center;
   padding: 20px;
+  justify-content: center;
 }
 
 #galeria {
