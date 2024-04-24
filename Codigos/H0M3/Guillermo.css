@@ -17,7 +17,7 @@ header {
 }
 
 nav {
-  background-color: rgba(207, 207, 207, 0.5803921569);
+  background-color: rgba(130, 130, 130, 0.5803921569);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -72,9 +72,6 @@ nav {
     background-color: #585858;
     width: 100%;
   }
-  .menu-toggle.active + .menu li {
-    margin: 10px;
-  }
 }
 section {
   padding: 50px;
@@ -97,44 +94,37 @@ section {
   justify-content: space-between;
 }
 
-/* Estilos para las cards de proyectos */
-footer {
-  background-color: #585858;
-  text-align: center;
-  padding: 20px;
+/* Estilos para la galería de proyectos*/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-#galeria {
-  padding: 20px;
-}
-
-.contenedor-imagenes {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  transition: transform 0.8s ease;
-  /* Animación de transición */
-}
-
-.contenedor-imagenes img {
-  margin-right: 20px;
+.image {
   width: 200px;
-  height: auto;
-  transform: translateX(0);
-  /* Posición inicial */
+  height: 200px;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #fff;
+  transition: transform 0.3s ease-in-out;
 }
 
-.contenedor-imagenes:hover {
-  transform: translateX(-10px);
-  /* Desplazamiento al hover */
+.image:hover {
+  transform: scale(1.1);
 }
 
-.contenedor-imagenes img:hover {
-  transform: scale(1);
-  /* Aumento de tamaño al hover */
-  box-shadow: 0 5px 10px rgb(255, 255, 255);
-  /* Sombra al hover */
+.image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image:hover img {
+  opacity: 0.8;
 }
 
 .card {
