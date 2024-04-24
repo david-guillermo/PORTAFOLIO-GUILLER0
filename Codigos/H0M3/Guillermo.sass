@@ -16,27 +16,119 @@ header
     padding: 20px
 
 
-// logo de la barra de nav
-nav img 
-    display: inline-block
-    margin-right: 20px
-    height: 50px 
+nav 
+    background-color: #cfcfcf94
+    color: #fff
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 20px
 
 
-nav ul 
-    list-style: none
+.logo img 
+    width: 50px
+    height: auto
+
+
+.menu 
+    list-style-type: none
     margin: 0
     padding: 0
+    display: flex
 
 
-nav li 
-    display: inline-block
-    margin-right: 20px
+.menu li 
+    margin-left: 20px
 
 
-nav a 
+.menu li a 
     text-decoration: none
-    color: #0a0a0a
+    color: #fff
+
+
+.menu-toggle 
+    display: none
+    color: #fff
+    font-size: 20px
+    cursor: pointer
+
+
+@media(max-width: 768px) 
+    .menu 
+        display: none
+    
+
+    .menu-toggle 
+        display: block
+    
+
+    .menu-toggle.active 
+        transform: rotate(90deg)
+    
+
+    .menu-toggle.active + .menu 
+        display: flex
+        flex-direction: column
+        position: absolute
+        top: 50px
+        left: 20px
+        background-color: #585858
+        width: 100%
+    
+
+    .menu-toggle.active + .menu li 
+        margin: 10px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// logo de la barra de nav
+// nav img 
+//     display: inline-block
+//     margin-right: 20px
+//     height: 50px 
+
+
+// nav ul 
+//     list-style: none
+//     margin: 0
+//     padding: 0
+//     display: flex
+
+
+// nav li 
+//     display: inline-block
+//     margin-right: 20px
+//     display: flex
+
+
+// nav a 
+//     text-decoration: none
+//     color: #0a0a0a
+
+
+
 
 // separacion entre senciones
 section 
@@ -168,9 +260,9 @@ footer
     font-size: 12px
     font-weight: lighter
 
-.card zaza
-    text-align: center
-    justify-content: center
+// .card zaza
+//     text-align: center
+//     justify-content: center
 
 .contenedor
     display: flex
